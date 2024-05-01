@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        /* Custom CSS for vertical navigation */
+        .navbar-nav {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .nav-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            padding: 15px 20px;
+            text-align: left;
+        }
+
+        .navbar-brand {
+            padding: 15px 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-container {
+            flex: 0 0 auto;
+        }
+
+        .content-container {
+            flex: 1 1 auto;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Car Service Management</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="car.php">Car Information</a>
+                    </li>
+                    <!-- Add more navigation items as needed -->
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content-container">
+            <header>
+                <h1>Welcome to Car Service Management</h1>
+            </header>
+
+            <main>
+                <section class="services">
+                    <h2>Our Services</h2>
+                    <p>We offer a wide range of car services including maintenance, repairs, and inspections to keep your vehicle in top condition.</p>
+                </section>
+
+                <section class="appointments">
+                    <h2>Book an Appointment</h2>
+                    <p>Schedule your car service appointment online for your convenience.</p>
+                    <a href="booking.php">Book Now</a>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2023 Car Service Management System</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
