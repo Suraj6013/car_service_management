@@ -6,7 +6,7 @@
 </head>
 <section class="appointments">
     <h2>Book an Appointment</h2>
-    <p>Schedule your car service appointment online for your convenience.</p>
+    <p>Schedule your car service appointment online as per your convenience.</p>
     
     <form id="appointment-form" action="booking.php" method="POST">
         <label for="name">Your Name:</label>
