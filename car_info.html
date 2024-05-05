@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Service Management Dashboard</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #dashboard {
+        width: 250px;
+        background-color: #333;
+        color: #fff;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 20px;
+      }
+
+      #dashboard ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #dashboard ul li {
+        padding: 10px;
+        border-bottom: 1px solid #555;
+      }
+
+      #dashboard ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #main-content {
+        margin-left: 250px;
+        padding: 20px;
+      }
+
+      .car-form {
+        max-width: 500px;
+        margin: 20px auto;
+      }
+
+      .car-form h2 {
+        color: #333;
+      }
+
+      .car-form form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .car-form form input[type="text"],
+      .car-form form input[type="number"],
+      .car-form form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .car-form form textarea {
+        resize: vertical;
+      }
+
+      .car-form form input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .car-form form input[type="submit"]:hover {
+        background-color: #555;
+      }
+
+      .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+
+      .close {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dashboard">
+      <ul>
+        <li><a href="home2.php" onclick="openTab('Home')">Home</a></li>
+        <li>
+          <a href="service.html" onclick="openTab('Services')">Services</a>
+        </li>
+        <li>
+          <a href="request_service.html" onclick="openTab('request')"
+            >Request Service</a
+          >
+        </li>
+        <li><a href="#" onclick="openTab('car-info')">Car Information</a></li>
+      </ul>
+    </div>
+
+    <div id="main-content">
+      <!-- Content will be loaded here -->
+    </div>
+
+    <script>
+      function openTab(tabName) {
+        var i;
+        var tabs = document.getElementsByClassName("tab");
+        for (i = 0; i < tabs.length; i++) {
+          tabs[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+
+    <!-- Car Information Form -->
+    <div id="car-info" class="tab" style="display: none">
+      <section class="car-form">
+        <h2>Car Information Form</h2>
+        <form action="car.php" method="POST">
+          <label for="carm">Car Make:</label>
+          <input type="text" id="carm" name="carm" required />
+
+          <label for="model">Car Model:</label>
+          <input type="text" id="model" name="model" required />
+
+          <label for="year">Car Year:</label>
+          <input type="number" id="year" name="year" required />
+
+          <label for="color">Car Color:</label>
+          <input type="text" id="color" name="color" required />
+
+          <label for="vin">VIN (Vehicle Identification Number):</label>
+          <input type="text" id="vin" name="vin" required />
+
+          <label for="mileage">Mileage:</label>
+          <input type="number" id="mileage" name="mileage" required />
+
+          <label for="additional-info">Additional Information:</label>
+          <textarea
+            id="additional-info"
+            name="additional-info"
+            rows="4"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

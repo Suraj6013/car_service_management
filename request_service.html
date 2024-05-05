@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Service Management Dashboard</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #dashboard {
+        width: 250px;
+        background-color: #333;
+        color: #fff;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 20px;
+      }
+
+      #dashboard ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #dashboard ul li {
+        padding: 10px;
+        border-bottom: 1px solid #555;
+      }
+
+      #dashboard ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #main-content {
+        margin-left: 250px;
+        padding: 20px;
+      }
+
+      .appointments {
+        max-width: 500px;
+        margin: 20px auto;
+      }
+
+      .appointments h2 {
+        color: #333;
+      }
+
+      .appointments form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .appointments form input[type="text"],
+      .appointments form input[type="email"],
+      .appointments form input[type="tel"],
+      .appointments form input[type="date"],
+      .appointments form input[type="time"],
+      .appointments form select,
+      .appointments form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .appointments form textarea {
+        resize: vertical;
+      }
+
+      .appointments form input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .appointments form input[type="submit"]:hover {
+        background-color: #555;
+      }
+
+      .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+
+      .close {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dashboard">
+      <ul>
+        <li><a href="home2.php" onclick="openTab('Home')">Home</a></li>
+        <li>
+          <a href="service.html" onclick="openTab('Services')">Services</a>
+        </li>
+        <li>
+          <a href="#" onclick="openTab('request')">Request Service</a>
+        </li>
+        <li>
+          <a href="car_info.html" onclick="openTab('enquiry')"
+            >Car Information</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div id="main-content">
+      <!-- Content will be loaded here -->
+    </div>
+
+    <script>
+      function openTab(tabName) {
+        var i;
+        var tabs = document.getElementsByClassName("tab");
+        for (i = 0; i < tabs.length; i++) {
+          tabs[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+
+    <!-- Request Service Form -->
+    <div id="request" class="tab" style="display: none">
+      <section class="appointments">
+        <h2>Book an Appointment</h2>
+        <p>
+          Schedule your car service appointment online for your convenience.
+        </p>
+
+        <form id="appointment-form" action="booking.php" method="POST">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="date">Appointment Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Appointment Time:</label>
+          <input type="time" id="time" name="time" required />
+
+          <label for="service">Select Service:</label>
+          <select id="service" name="service" required>
+            <option value="Full-service">Full Services</option>
+            <option value="oil-change">Oil Change</option>
+            <option value="paint">Paint</option>
+            <option value="tire-Change">Tire Change</option>
+            <option value="brake-service">Brake Service</option>
+            <!-- Add more service options here -->
+          </select>
+          <label for="Message">Additional Information:</label>
+          <textarea id="Message" name="Message" rows="4"></textarea>
+
+          <input type="submit" value="Book Now" />
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

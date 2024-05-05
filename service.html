@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #dashboard {
+        width: 250px;
+        background-color: #333;
+        color: #fff;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 20px;
+      }
+
+      #dashboard ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #dashboard ul li {
+        padding: 10px;
+        border-bottom: 1px solid #555;
+      }
+
+      #dashboard ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #main-content {
+        margin-left: 250px;
+        padding: 20px;
+      }
+      body {
+        background-color: #f8f9fa; /* Set background color */
+      }
+
+      .services-container {
+        padding: 50px 0;
+      }
+
+      .service-box {
+        color: #fff; /* Set text color */
+        padding: 30px 0 30px 30px; /* Added padding to the left */
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-left: 150px;
+        height: 270px; /* Adjust height for uniformity */
+        width: 300px;
+        position: relative;
+        overflow: hidden;
+        background-size: cover; /* Make background image cover entire box */
+        background-position: center; /* Center the background image */
+      }
+
+      .service-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Semi-transparent background color */
+        z-index: -1;
+      }
+
+      .service-heading {
+        font-size: 28px; /* Increase font size for more boldness */
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        z-index: 1; /* Ensure text appears above the background */
+      }
+
+      .service-description {
+        font-size: 16px;
+        z-index: 1; /* Ensure text appears above the background */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dashboard">
+      <ul>
+        <li><a href="home2.php" onclick="openTab('Home')">Home</a></li>
+        <li>
+          <a href="#" onclick="openTab('Services')">Services</a>
+        </li>
+        <li>
+          <a href="request_service.html" onclick="openTab('request')"
+            >Request Service</a
+          >
+        </li>
+        <li>
+          <a href="car_info.html" onclick="openTab('enquiry')"
+            >Car Information</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="container services-container">
+      <h1 class="text-center mb-5 font-weight-bold" style="padding-left: 200px">
+        Our Services
+      </h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div
+            class="service-box"
+            style="background-image: url('images/full_service.jpg')"
+          >
+            <h2 class="service-heading">Full Service</h2>
+            <p class="service-description">
+              Experience worry-free driving with our Full-Service package! From
+              engine to brakes, we've got it all covered. Keep your car in top
+              shape.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="service-box"
+            style="background-image: url('images/oil.jpg')"
+          >
+            <h2 class="service-heading">Oil Change</h2>
+            <p class="service-description">
+              Our oil change service includes a thorough oil and filter
+              replacement, ensuring your engine runs smoothly and efficiently.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="service-box"
+            style="background-image: url('images/paint.jpg')"
+          >
+            <h2 class="service-heading">Paint</h2>
+            <p class="service-description">
+              We offer professional paint service. Transform Your Car’s Look by
+              quality Paintwork That Lasts
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="service-box"
+            style="background-image: url('images/tyre.jpg')"
+          >
+            <h2 class="service-heading">Tire Change</h2>
+            <p class="service-description">
+              Upgrade your ride with fresh tires! Safety and performance, all in
+              a quick change
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="service-box"
+            style="background-image: url('images/brake.jpeg')"
+          >
+            <h2 class="service-heading">Brake Service</h2>
+            <p class="service-description">
+              Our brake service includes inspections and maintenance to keep
+              your brakes in top condition, ensuring your safety while driving.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="service-box"
+            style="background-image: url('images/battery.jpg')"
+          >
+            <h2 class="service-heading">Battery and Coolant Service</h2>
+            <p class="service-description">
+              Expert Car Battery Service! Our coolant service keeps your car’s
+              temperature in check
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (Optional, if you need it) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
